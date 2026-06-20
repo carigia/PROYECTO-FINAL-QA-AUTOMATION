@@ -9,8 +9,8 @@
 | Nombre Completo | Email |
 |----------------|-------|
 | [Carina Giacoletti] | [cgiacoletti@hotmail.com] |
-| [Nombre Integrante 2] | [email2@ejemplo.com] |
-| [Nombre Integrante 3] | [email3@ejemplo.com] |
+| [Tamara Milman] | [email2@ejemplo.com] |
+| [Eliana Speranza] | [speranza.eliana.e@gmail.com] |
 
 ---
 
@@ -18,7 +18,7 @@
 
 | Recurso | Link |
 |---------|------|
-| 📋 Tablero Trello (Bugs) | [Ver Tablero](https://trello.com/b/INSERTAR-LINK-AQUI) |
+| 📋 Tablero Trello (Bugs) | [Ver Tablero](https://trello.com/b/GpTtbPud/challenge)) |
 | 📊 Casos de Prueba (Excel/Sheets) | [Ver Planilla](https://docs.google.com/spreadsheets/d/INSERTAR-LINK-AQUI) |
 | 🌐 App bajo prueba | [automationintesting.online](https://automationintesting.online) |
 | 📖 API Docs | [Swagger](https://automationintesting.online/api/swagger-ui/) |
