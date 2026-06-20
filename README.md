@@ -10,7 +10,7 @@
 |----------------|-------|
 | [Carina Giacoletti] | [cgiacoletti@hotmail.com] |
 | [Nombre Integrante 2] | [email2@ejemplo.com] |
-| [Nombre Integrante 33] | [email3@ejemplo.com] |
+| [Nombre Integrante 3] | [email3@ejemplo.com] |
 
 ---
 
