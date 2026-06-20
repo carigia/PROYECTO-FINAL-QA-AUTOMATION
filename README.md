@@ -10,7 +10,7 @@
 |----------------|-------|
 | [Carina Giacoletti] | [cgiacoletti@hotmail.com] |
 | [Tamara Milman] | [tamaramilman3@gmail.com] |
-| [Nombre Integrante 3] | [email3@ejemplo.com] |
+| [Eliana Speranza] | [speranza.eliana.e@gmail.com] |
 
 ---
 
