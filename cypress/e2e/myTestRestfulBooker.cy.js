@@ -11,7 +11,7 @@ describe('3.1 Reserva exitosa como usuario invitado', () => {
       cy.get('.row.g-4').should('be.visible')
       cy.get('.row.g-4').should('have.length',3)
      })
-   it(' Seleccionar habitación Single y navegar a la reserva', () => {
+   it(' Seleccionar habitación Double y navegar a la reserva', () => {
       cy.get(':nth-child(2) > .card > .card-footer > .btn').should('be.visible')
       cy.get(':nth-child(2) > .card > .card-footer > .btn').click()  
       cy.get('[id="doReservation"]').click()
