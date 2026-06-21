@@ -54,9 +54,25 @@ cy.get('.btn-primary.w-100.mb-3').should('contain.text', 'Reserve').click()
 
         })
     })
-  
+  describe('3.2 Validaciones del formulario de reserva', () => {
+    Cypress.on('uncaught:exception', (err, runnable) => {
+    return false;
+     });  
+    beforeEach(()=>{
+      cy.visit('https://automationintesting.online')
+    }) 
+    it('Completar el formulario sin campos', () => {
+    //Busco el primer elemento que contenga book now y hago click
+      cy.contains('Book now').first().click()
+    //verifico que vaya a una url de reservación
+      cy.url().should('include', '/reservation/')
+    // Reviso que esté visible el botón para reservar y hago click
+      cy.get('#doReservation').should('be.visible').click()
+    // verifico que se vea el input de firstname que es el primero del formulario
+     cy.get('.btn-primary.w-100.mb-3').should('contain.text', 'Reserve').click()  
+    })
+ })
    
-
     describe('3.3 Formulario de contacto', () => {
     Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
