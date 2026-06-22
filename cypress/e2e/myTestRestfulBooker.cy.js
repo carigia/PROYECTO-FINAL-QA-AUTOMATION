@@ -1,4 +1,12 @@
-it("3.1.1 debe mostrar habitaciones disponibles en la página principal", () => {
+describe("3.1 Reserva exitosa como usuario invitado ", () => {
+  Cypress.on("uncaught:exception", () => false);
+  beforeEach(() => {
+    cy.visit("https://automationintesting.online");
+  });
+  afterEach(function () {
+    cy.screenshot(`${this.currentTest.title}-${this.currentTest.state}`);
+  });
+  it("3.1.1 debe mostrar habitaciones disponibles en la página principal", () => {
     // Verifica el título de la sección de habitaciones
     cy.contains("Our Rooms").should("be.visible");
     cy.get(".row.g-4").should("be.visible");
@@ -38,10 +46,10 @@ it("3.1.1 debe mostrar habitaciones disponibles en la página principal", () => 
       //.should('be.visible').and('include.text', `${datos.checkin} - ${datos.checkout}`)
     });
   });
-});
 
-describe('3.2 Validaciones del formulario de reserva', () => {
-  Cypress.on('uncaught:exception', () => false)
+
+describe("3.2 Validaciones del formulario de reserva", () => {
+  Cypress.on("uncaught:exception", () => false);
   beforeEach(() => {
     cy.visit("https://automationintesting.online");
   });
@@ -119,12 +127,13 @@ describe("3.3 Formulario de contacto", () => {
   beforeEach(() => {
     cy.visit("https://automationintesting.online");
   });
-   afterEach(function () {
+  afterEach(function () {
     cy.screenshot(`${this.currentTest.title}-${this.currentTest.state}`);
   });
   it("Completar el formulario de contacto con datos válidos", () => {
     cy.fixture("contacto").then((datos) => {
-      cy.completarFormularioContacto(datos)
-    })
-  })
-})
+      cy.completarFormularioContacto(datos);
+    });
+  });
+});
+});
