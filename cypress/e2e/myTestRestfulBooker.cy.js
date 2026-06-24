@@ -89,4 +89,39 @@ describe("3.3 Formulario de contacto", () => {
       cy.completarFormularioContacto(datos)
     })
   })
+
+
+ describe('Suite de Pruebas de API - Shady Meadows', () => {
+
+   
+    it('CP-24: Debe obtener la lista de habitaciones (GET)', () => {
+        cy.request('GET', 'https://automationintesting.online/api/room/')
+            .then((response) => {
+                expect(response.status).to.eq(200);
+            });
+    });
+
+    it('CP-25: Debe manejar el envío de booking vacío', () => {
+        cy.request({
+            method: 'POST',
+            url: 'https://automationintesting.online/api/booking/',
+            body: {},
+            failOnStatusCode: false 
+        }).then((response) => {
+            // Aceptamos cualquier código de error (4xx o 5xx) que la API devuelva
+            expect(response.status).to.be.gte(400); 
+        });
+    });
+
+
+    it('CP-26: Debe loguearse exitosamente como admin', () => {
+        cy.request('POST', 'https://automationintesting.online/api/auth/login', {
+            username: 'admin',
+            password: 'password'
+        }).then((response) => {
+            expect(response.status).to.eq(200);
+        });
+    });
+
+});
 })
