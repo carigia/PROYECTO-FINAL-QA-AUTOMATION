@@ -13,38 +13,60 @@ describe("3.1 Reserva exitosa como usuario invitado ", () => {
     cy.get(".row.g-4").should("be.visible");
     cy.get(".row.g-4").should("have.length", 3);
   });
-  it("3.1.2 y 3.1.3 Completar el formulario con datos válidos (nombre, apellido, email, teléfono y fechas)", () => {
-    //Busco el primer elemento que contenga book now y hago click
-    cy.contains("Book now").first().click();
-    //verifico que vaya a una url de reservación
-    cy.url().should("include", "/reservation/");
-    // Reviso que esté visible el botón para reservar y hago click
-    cy.get("#doReservation").should("be.visible").click();
-    // verifico que se vea el input de firstname que es el primero del formulario
-    cy.get('input[name="firstname"]').should("be.visible");
 
+
+  it("3.1.2 Seleccionar una habitación y abrir el formulario de reserva)", () => {
+   cy.irAlFormularioReserva();
+     cy.get('input[name="firstname"]').should("be.visible");
+  cy.get('input[name="lastname"]').should("be.visible");
+  cy.get('input[name="email"]').should("be.visible");
+  cy.get('input[name="phone"]').should("be.visible");
+  });
+
+
+it("3.1.3 Completar el formulario con datos válidos (nombre, apellido, email, teléfono y fechas)", () => {
+  cy.irAlFormularioReserva();
     cy.fixture("reserva").then((datos) => {
       cy.completarFormularioReserva(datos);
     });
   });
+
+
   it("3.1.4 Confirmar la reserva y validar que el mensaje de éxito aparece en pantalla", () => {
     cy.contains("Book now").first().click();
     cy.url().should("include", "/reservation/");
     cy.get("#doReservation").should("be.visible").click();
-    cy.get('input[name="firstname"]').should("be.visible");
+cy.location('search').then(search => {
+  const params = new URLSearchParams(search)
+
+ 
+})
+
+       cy.get('input[name="firstname"]').should("be.visible");
 
     //Busco comando que rellena reserva
     cy.fixture("reserva").then((datos) => {
+       cy.obtenerReservaUnaNoche().then((fechas) => {
+    datos.checkin = fechas.checkin
+    datos.checkout = fechas.checkout
       cy.completarFormularioReserva(datos);
+     });
+     
+      cy.location('search').then((search) => {
+    const params = new URLSearchParams(search);
+
+    expect(params.get('checkin')).to.equal(datos.checkin);
+    expect(params.get('checkout')).to.equal(datos.checkout);
+  });
 
       cy.get(".btn-primary.w-100.mb-3")
         .should("contain.text", "Reserve")
         .click();
 
-      // cy.contains('Booking Confirmed').should('be.visible')
+      cy.contains('Booking Confirmed', { timeout: 10000 })
+  .should('be.visible')
 
-      //cy.contains('Your booking has been confirmed for the following dates:')
-      //.should('be.visible').and('include.text', `${datos.checkin} - ${datos.checkout}`)
+     
     });
   });
 
