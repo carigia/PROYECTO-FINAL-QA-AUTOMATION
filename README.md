@@ -19,11 +19,13 @@
 | Recurso | Link |
 |---------|------|
 | 📋 Tablero Trello (Bugs) | [Ver Tablero](https://trello.com/b/GpTtbPud/challenge) |
-| 📊 Casos de Prueba (Excel/Sheets) | [Ver Planilla](https://docs.google.com/spreadsheets/d/INSERTAR-LINK-AQUI) |
+ 📊 Casos de Prueba (Excel/Sheets) | [Ver Planilla](https://docs.google.com/spreadsheets/d/1M8Iohl-2NHIHnYoBbxOAmIdAjbZ4Esyu/edit?gid=1837477377#gid=1837477377) |
+ | 🐞 Bugs (Reporte) | [Ver Bugs](https://docs.google.com/spreadsheets/d/1xu3-vjH6tdDmit_6MAn8-WqB8Xf5CRo8/edit?rtpof=true&gid=1912385802#gid=1912385802) |
 | 🌐 App bajo prueba | [automationintesting.online](https://automationintesting.online) |
 | 📖 API Docs | [Swagger](https://automationintesting.online/api/swagger-ui/) |
 
 ---
+
 
 ## 🎯 Objetivo del Proyecto
 
