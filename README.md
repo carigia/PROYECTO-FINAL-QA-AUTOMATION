@@ -33,33 +33,31 @@ Diseñar, documentar y automatizar pruebas funcionales y de API sobre **Shady Me
 
 ## 🏗️ Estructura del Proyecto
 
-── cypress
-│   ├── e2e
-│   │   └── myTestRestfulBooker.cy.js
-│   │
-│   ├── fixtures
-│   │   ├── contacto.json
-│   │   ├── example.json
-│   │   └── reserva.json
-│   │
-│   ├── screenshots
-│   │
-│   ├── support
-│   │   ├── commands.js
-│   │   ├── e2e.js
-│   │   └── formsCommands.js
-│   │
-│   └── videos
-│       └── myTestRestfulBooker.cy.js.mp4
-│
-├── node_modules
-│
-├── README.md
-├── cypress.config.js
-├── package-lock.json
-└── package.json
+## 📁 Estructura del Proyecto
 
----
+```bash
+cypress/
+├── e2e/
+│   └── myTestRestfulBooker.cy.js
+├── fixtures/
+│   ├── contacto.json
+│   ├── example.json
+│   └── reserva.json
+├── screenshots/
+├── support/
+│   ├── commands.js
+│   ├── e2e.js
+│   └── formsCommands.js
+├── videos/
+│   └── myTestRestfulBooker.cy.js.mp4
+
+node_modules/
+README.md
+cypress.config.js
+package-lock.json
+package.json
+```
+
 
 ## 🧪 Cobertura de Pruebas
 
